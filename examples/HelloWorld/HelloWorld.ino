@@ -14,7 +14,7 @@
 // Place, Suite 330, Boston, MA 02111-1307 USA
 
 #include "uart_stdio.h"
-#include "ardu_stdio.h"
+#include "ArduinoStdio.h"
 
 char input;
 

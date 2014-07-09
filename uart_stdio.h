@@ -21,6 +21,7 @@
 #define __PRINTF_H__
 
 #ifdef ARDUINO
+#include <Arduino.h>
 
 int serial_putc( char c, FILE * )
 {

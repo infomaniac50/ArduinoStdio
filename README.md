@@ -2,6 +2,11 @@
 
 Using stdio with Arduino peripherals.
 
+#### Demos ####
+**HelloWorldLCD**  
+Using Standard IO with the Liquid Crystal library.  
+[![Arduino LCD Standard IO](https://img.youtube.com/vi/0bkt1FOQFSU/0.jpg)](http://youtu.be/0bkt1FOQFSU)
+
 #### Copyright (C) 2014 Derek Chafin ####
 
 This program is free software; you can redistribute it and/or modify it under

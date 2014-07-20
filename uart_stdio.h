@@ -16,32 +16,30 @@
  * Setup necessary to direct stdout to the Arduino Serial library, which
  * enables 'printf'
  */
-
-#ifndef __PRINTF_H__
-#define __PRINTF_H__
-
+#ifndef __UART_STDIO_H__
+#define __UART_STDIO_H__
 #ifdef ARDUINO
 #include <Arduino.h>
 
-int serial_putc( char c, FILE * )
+int stdio_serial_putc( char c, FILE * )
 {
   Serial.write( c );
 
   return c;
 }
 
-int serial_getc(FILE *)
+int stdio_serial_getc(FILE *)
 {
   // getchar blocks so wait until data is available.
   while(!Serial.available()) {;}
   return Serial.read();
 }
 
-#define SERIAL_IN &serial_getc
-#define SERIAL_OUT &serial_putc
+#define SERIAL_IN &stdio_serial_getc
+#define SERIAL_OUT &stdio_serial_putc
 
 #else
 #error This example is only for use on Arduino.
 #endif // ARDUINO
 
-#endif // __PRINTF_H__
+#endif // __UART_STDIO_H__
